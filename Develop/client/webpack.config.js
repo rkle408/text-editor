@@ -22,6 +22,11 @@ module.exports = () => {
         title: 'Webpack Plugin',
       }),
 
+      new HtmlWebpackPlugin({
+        title: 'Hot Module Reloading',
+        template: './index.html',
+      }),
+      
       // Injects our custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
